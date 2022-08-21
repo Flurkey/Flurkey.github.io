@@ -1,13 +1,11 @@
 var size = 5;
 
 function crField() {
-  for (let i = 0; i < 100/size; i++) {
+  for (let z = 0; z < 100/size; z++) {
     for (let i = 0; i < 100/size; i++) {
       var divField = document.createElement("div");
-      divField.style.width = size+"%";
-      divField.style.height = size+"%";
-      divField.style.background = "black";
-      divField.style.cursor = "pointer"
+      divField.setAttribute("Class", "fieldCard");
+      divField.setAttribute("id", z+":"+i);
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
