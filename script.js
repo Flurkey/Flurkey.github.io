@@ -39,10 +39,10 @@ function crMines(num) {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   for (let i = 0; i < num; i++) {
     var ranCard = Arr[Math.floor(Math.random() * Math.sqrt(fieldsize))][Math.floor(Math.random() * Math.sqrt(fieldsize))]
-    if(!document.getElementById(ranCard).getAttribute("mine")) {
-      document.getElementById(ranCard).setAttribute("mine", true)
+    if(document.getElementById(ranCard).getAttribute("mine") == false) {
+      document.getElementById(ranCard).setAttribute("mine", true);
     } else {
-      i--; 
+      console.log(ranCard + " is already a bomb.");
     }
   }
 }
