@@ -7,8 +7,8 @@ divField.style.background = "black";
 divField.style.cursor = "pointer"
 
 function crField() {
-  for (let i = 0; i > 100/size; i++) {
-    for (let i = 0; i > 100/size; i++) {
+  for (let i = 0; i <= 100/size; i++) {
+    for (let i = 0; i <= 100/size; i++) {
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
