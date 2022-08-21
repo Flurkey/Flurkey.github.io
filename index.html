@@ -14,8 +14,9 @@
     transform: translate(-50%, -50%);
 ">
       <div class="PlayingGround" style="
-    height: 0;
-    padding-bottom: 35vw;
+    display: flex;
+    flex-direction: row;
+    height: 35vw;
     width: 35vw;
     background: rgb(255,255,255);
     border-radius: .75vw;
@@ -23,14 +24,15 @@
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
+    flex-wrap: wrap;
+    align-content: flex-start;
 ">
         <div class="card" style="
     width: 5%;
-    height: 0;
-    padding-bottom: 5%;
+    height: 5%;
     background: black;
 "></div>
       </div>
     </div>
   </body>
-</html>;
+</html>
