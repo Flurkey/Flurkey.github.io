@@ -39,7 +39,7 @@ function crMines(num) {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   for (let i = 0; i < num; i++) {
     var ranCard = Arr[Math.floor(Math.random() * Math.sqrt(fieldsize))][Math.floor(Math.random() * Math.sqrt(fieldsize))]
-    if(document.getElementById(ranCard).getAttribute("mine") == false) {
+    if(document.getElementById(ranCard).getAttribute("mine") == 'false') {
       document.getElementById(ranCard).setAttribute("mine", true);
     } else {
       console.log(ranCard + " is already a bomb.");
@@ -49,7 +49,7 @@ function crMines(num) {
 
 function showMines() {
   for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
-    if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine")) {
+    if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
     }
   }
