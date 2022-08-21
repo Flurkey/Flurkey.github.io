@@ -33,5 +33,10 @@ body {
 .fieldCard {
   height: 5%;
   width: 5%;
-  background: black;
+  inset 1px 1px 3px white;
+  background: gray;
+}
+
+.fieldCard:hover {
+  background: darkgray;
 }
