@@ -6,6 +6,7 @@ function crField() {
       var divField = document.createElement("div");
       divField.setAttribute("Class", "fieldCard");
       divField.setAttribute("id", z+":"+i);
+      divField.setAttribute("mine",false)
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
@@ -35,6 +36,21 @@ function fieldLink() {
 }
 
 function crMines(num) {
-  
-  console.log(Arr[Math.floor(Math.random() * Math.sqrt(document.getElementsByClassName("fieldCard").length))][Math.floor(Math.random() * Math.sqrt(document.getElementsByClassName("fieldCard").length))])
+  var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
+  for (let i = 0; i < num; i++) {
+    var ranCard = Arr[Math.floor(Math.random() * Math.sqrt(fieldsize))][Math.floor(Math.random() * Math.sqrt(fieldsize))]
+    if(!document.getElementById(ranCard).getAttribute("mine")) {
+      document.getElementById(ranCard).setAttribute("mine", true)
+    } else {
+      i--; 
+    }
+  }
+}
+
+function showMines() {
+  for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
+    if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine")) {
+      document.getElementsByClassName("fieldCard")[i].style.background = "red";
+    }
+  }
 }
