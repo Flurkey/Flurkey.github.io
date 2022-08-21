@@ -10,3 +10,19 @@ function crField() {
     }
   }
 }
+
+function mines() {
+  var field = document.getElementsByClassName("fieldCard")
+  var col = 0;
+  var row = 0;
+
+  for (let i = 0; i < field.length; i++) {
+    Arr[row][col] = field[i].id
+    if(col < 19) {
+        col++
+    } else {
+        col = 0;
+        row++;
+    }
+  }
+}
