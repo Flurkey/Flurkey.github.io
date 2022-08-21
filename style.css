@@ -39,4 +39,5 @@ body {
 
 .fieldCard:hover {
   background: darkgray;
+  cursor: pointer;
 }
