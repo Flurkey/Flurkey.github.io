@@ -1,5 +1,5 @@
 var size = 5;
-
+var Arr = []
 function crField() {
   for (let z = 0; z < 100/size; z++) {
     for (let i = 0; i < 100/size; i++) {
@@ -13,7 +13,7 @@ function crField() {
 
 function fieldLink() {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
-  var Arr = new Array(fieldsize)
+  Arr = new Array(fieldsize)
   for (var i = 0; i < Arr.length; i++) {
       Arr[i] = new Array(fieldsize);
     }
