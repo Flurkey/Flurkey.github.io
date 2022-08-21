@@ -11,7 +11,7 @@ function crField() {
   }
 }
 
-function mines() {
+function fieldLink() {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   var Arr = new Array(fieldsize)
   for (var i = 0; i < Arr.length; i++) {
@@ -31,4 +31,9 @@ function mines() {
         row++;
     }
   }
+}
+
+function crMines(num) {
+  
+  console.log(Arr[Math.floor(Math.random() * Math.sqrt(document.getElementsByClassName("fieldCard").length))][Math.floor(Math.random() * Math.sqrt(document.getElementsByClassName("fieldCard").length))])
 }
