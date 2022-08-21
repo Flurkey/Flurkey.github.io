@@ -33,11 +33,11 @@ body {
 .fieldCard {
   height: 5%;
   width: 5%;
-  inset 1px 1px 3px white;
+  box-shadow: inset 1px 1px 3px white;
   background: gray;
+  cursor: pointer;
 }
 
 .fieldCard:hover {
   background: darkgray;
-  cursor: pointer;
 }
