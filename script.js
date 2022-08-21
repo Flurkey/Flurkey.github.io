@@ -9,6 +9,7 @@ function crField() {
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
+  fieldLink();
 }
 
 function fieldLink() {
