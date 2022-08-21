@@ -3,7 +3,7 @@ body {
   background: rgba(27,27,27);
 }
 
-#PlayingGroundBackground {
+.PlayingGroundBackground {
     height: 0;
     padding-bottom: 40vw;
     width: 40vw;
@@ -15,7 +15,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#PlayingGround {
+.PlayingGround {
     display: flex;
     flex-direction: row;
     height: 35vw;
@@ -30,7 +30,7 @@ body {
     align-content: flex-start;
 }
 
-#FieldCard {
+.fieldCard {
   height: 5%;
   width: 5%;
   background: black;
