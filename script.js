@@ -9,7 +9,7 @@ divField.style.cursor = "pointer"
 function crField() {
   for (let i = 0; i > 100/size; i++) {
     for (let i = 0; i > 100/size; i++) {
-      document.getElementsByClassName("PlayingGround").appendChild(divField);
+      document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
 }
