@@ -38,19 +38,23 @@ function fieldLink() {
 function crMines(num) {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   for (let i = 0; i < num; i++) {
-    var ranCard = Arr[Math.floor(Math.random() * Math.sqrt(fieldsize))][Math.floor(Math.random() * Math.sqrt(fieldsize))]
+    var ranCard = Arr[Math.floor(Math.random() * fieldsize)][Math.floor(Math.random() * fieldsize)]
     if(document.getElementById(ranCard).getAttribute("mine") == 'false') {
       document.getElementById(ranCard).setAttribute("mine", true);
     } else {
       console.log(ranCard + " is already a bomb.");
+      i--;
     }
   }
 }
 
 function showMines() {
+  var bombs = 0;
   for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
     if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
+      bombs++;
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
     }
   }
+  console.log(bombs);
 }
