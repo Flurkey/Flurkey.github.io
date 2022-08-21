@@ -7,6 +7,10 @@ function crField() {
       divField.setAttribute("Class", "fieldCard");
       divField.setAttribute("id", z+":"+i);
       divField.setAttribute("mine",false)
+      divField.onClick = function () {
+        fieldClick(this);
+      }
+      
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
     }
   }
@@ -57,4 +61,8 @@ function showMines() {
     }
   }
   console.log(bombs);
+}
+
+function fieldClick(btn) {
+  console.log(btn);
 }
