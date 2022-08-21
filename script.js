@@ -12,13 +12,19 @@ function crField() {
 }
 
 function mines() {
+  var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
+  var Arr = new Array(fieldsize)
+  for (var i = 0; i < Arr.length; i++) {
+      Arr[i] = new Array(fieldsize);
+    }
+
   var field = document.getElementsByClassName("fieldCard")
   var col = 0;
   var row = 0;
 
   for (let i = 0; i < field.length; i++) {
     Arr[row][col] = field[i].id
-    if(col < 19) {
+    if(col < fieldsize-1) {
         col++
     } else {
         col = 0;
