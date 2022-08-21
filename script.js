@@ -7,7 +7,7 @@ function crField() {
       divField.setAttribute("Class", "fieldCard");
       divField.setAttribute("id", z+":"+i);
       divField.setAttribute("mine",false)
-      divField.onClick = function () {
+      divField.onclick = function () {
         fieldClick(this);
       }
       
