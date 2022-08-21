@@ -60,7 +60,6 @@ function showMines() {
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
     }
   }
-  console.log(bombs);
 }
 
 function fieldClick(btn) {
