@@ -62,7 +62,7 @@ function crNear() {
       for (let _ = -1; _ < 2; _++) {
         for (let k = -1; k < 2; k++) {
           if (Arr[curLocation[0]-_][curLocation[1]-k] != NaN || document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("mine") == "false") {
-            document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near") = parseInt(document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near")) + 1
+            document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).setAttribute("near", parseInt(document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near")) + 1);
           }
         }
       }
