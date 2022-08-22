@@ -89,7 +89,7 @@ function fieldClick(btn) {
       for (let k = -1; k < 2; k++) {
         var x = parseInt(curLocation[0])+_;
         var y = parseInt(curLocation[1])+k;
-        if(parseInt(document.getElementById(x+":"+y).getAttribute(near)) > 0) {
+        if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) > 0) {
           console.log("can open");
         }
       }
@@ -99,4 +99,5 @@ function fieldClick(btn) {
 
 function showNum(btn) {
   btn.innerHTML = btn.getAttribute("near");
+  btn.style.background = "dimgray";
 }
