@@ -92,10 +92,12 @@ function fieldClick(btn) {
         for (let k = -1; k < 2; k++) {
           var x = parseInt(curLocation[0])+_;
           var y = parseInt(curLocation[1])+k;
-          if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
-            fieldClick(document.getElementById(x+":"+y));
-          } else {
-            showNum(document.getElementById(x+":"+y));
+          if (document.getElementById(x+":"+y) != null) {
+            if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
+              fieldClick(document.getElementById(x+":"+y));
+            } else {
+              showNum(document.getElementById(x+":"+y));
+            }
           }
         }
       }
