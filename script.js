@@ -62,7 +62,6 @@ function crNear() {
         for (let k = -1; k < 2; k++) {
             var x = parseInt(curLocation[0])+_;
             var y = parseInt(curLocation[1])+k;
-            console.log(document.getElementById(x+":"+y))
           if (document.getElementById(x+":"+y) != null && document.getElementById(x+":"+y).getAttribute("mine") == "false") {
             document.getElementById(x+":"+y).setAttribute("near",parseInt(document.getElementById(x+":"+y).getAttribute("near")) + 1);
           }
