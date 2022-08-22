@@ -7,8 +7,8 @@ function crField() {
       divField.setAttribute("Class", "fieldCard");
       divField.setAttribute("id", z+":"+i);
       divField.setAttribute("mine",false);
-      divField.setAttribute("near","0");
       divField.setAttribute("clicked",false);
+      divField.setAttribute("near","0");
       divField.onclick = function () {
         fieldClick(this);
       }
@@ -103,6 +103,8 @@ function fieldClick(btn) {
           }
         }
       }
+    } else if (btn.getAttribute("mine") == "true") {
+      showMines()
     }
   }
 }
