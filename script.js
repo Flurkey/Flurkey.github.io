@@ -6,7 +6,8 @@ function crField() {
       var divField = document.createElement("div");
       divField.setAttribute("Class", "fieldCard");
       divField.setAttribute("id", z+":"+i);
-      divField.setAttribute("mine",false)
+      divField.setAttribute("mine",false);
+      divField.setAttribute("near","0");
       divField.onclick = function () {
         fieldClick(this);
       }
@@ -24,7 +25,7 @@ function fieldLink() {
       Arr[i] = new Array(fieldsize);
     }
 
-  var field = document.getElementsByClassName("fieldCard")
+  var field = document.getElementsByClassName("fieldCard");
   var col = 0;
   var row = 0;
 
@@ -48,6 +49,23 @@ function crMines(num) {
     } else {
       console.log(ranCard + " is already a bomb.");
       i--;
+    }
+  }
+}
+
+function crNear() {
+  var field = document.getElementsByClassName("fieldCard");
+  for (let i = 0; i < field.length; i++) {
+    if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
+      var curLocation = field[i].id.split(":");
+      
+      for (let _ = -1; _ < 2; _++) {
+        for (let k = -1; k < 2; k++) {
+          if (Arr[curLocation[0]-_][curLocation[1]-k] != NaN || document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("mine") == "false") {
+            document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near") = parseInt(document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near")) + 1
+          }
+        }
+      }
     }
   }
 }
