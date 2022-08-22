@@ -38,6 +38,7 @@ function fieldLink() {
         row++;
     }
   }
+  crMines(90);
 }
 
 function crMines(num) {
@@ -72,15 +73,29 @@ function crNear() {
 }
 
 function showMines() {
-  var bombs = 0;
   for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
     if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
-      bombs++;
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
     }
   }
 }
 
 function fieldClick(btn) {
-  console.log(btn);
+  if (btn.getAttribute("mine") == "false") {
+    showNum(btn)
+    var curLocation = btn.id.split(":");
+    for (let _ = -1; _ < 2; _++) {
+      for (let k = -1; k < 2; k++) {
+        var x = parseInt(curLocation[0])+_;
+        var y = parseInt(curLocation[1])+k;
+        if(parseInt(document.getElementById(x+":"+y).getAttribute(near)) > 0) {
+          console.log("can open");
+        }
+      }
+    }
+  }
+}
+
+function showNum(btn) {
+  btn.innerHTML = btn.getAttribute("near");
 }
