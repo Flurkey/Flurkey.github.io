@@ -118,3 +118,7 @@ function showNum(btn) {
   btn.innerHTML = btn.getAttribute("near");
   btn.style.background = "dimgray";
 }
+
+function flag(btn) {
+  console.log("right clicked"+ btn)
+}
