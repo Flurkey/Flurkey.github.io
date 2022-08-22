@@ -52,6 +52,7 @@ function crMines(num) {
       i--;
     }
   }
+  crNear();
 }
 
 function crNear() {
