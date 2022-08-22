@@ -8,6 +8,7 @@ function crField() {
       divField.setAttribute("id", z+":"+i);
       divField.setAttribute("mine",false);
       divField.setAttribute("clicked",false);
+      divField.setAttribute("flagged",false);
       divField.setAttribute("near","0");
       
       divField.onclick = function () {
@@ -120,5 +121,11 @@ function showNum(btn) {
 }
 
 function flag(btn) {
-  console.log("right clicked"+ btn)
+  if (btn.getAttribute("flagged") == "false") {
+    btn.setAttribute("flagged", true)
+    btn.style.background = repeating-linear-gradient(45deg, #4caf50, transparent 100px)
+  } else {
+    btn.setAttribute("flagged", false)
+    btn.style.background = gray
+  }
 }
