@@ -8,6 +8,7 @@ function crField() {
       divField.setAttribute("id", z+":"+i);
       divField.setAttribute("mine",false);
       divField.setAttribute("near","0");
+      divField.setAttribute("clicked",false);
       divField.onclick = function () {
         fieldClick(this);
       }
@@ -82,7 +83,8 @@ function showMines() {
 }
 
 function fieldClick(btn) {
-  if (btn.getAttribute("mine") == "false") {
+  if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false") {
+    btn.setAttribute("clicked", true);
     showNum(btn)
     var curLocation = btn.id.split(":");
     for (let _ = -1; _ < 2; _++) {
