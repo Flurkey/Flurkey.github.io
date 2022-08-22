@@ -58,11 +58,13 @@ function crNear() {
   for (let i = 0; i < field.length; i++) {
     if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
       var curLocation = field[i].id.split(":");
-      
       for (let _ = -1; _ < 2; _++) {
         for (let k = -1; k < 2; k++) {
-          if (Arr[curLocation[0]-_][curLocation[1]-k] != NaN || document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("mine") == "false") {
-            document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).setAttribute("near", parseInt(document.getElementById(curLocation[0]-_+":"+curLocation[1]-k).getAttribute("near")) + 1);
+            var x = parseInt(curLocation[0])+_;
+            var y = parseInt(curLocation[1])+k;
+            console.log(document.getElementById(x+":"+y))
+          if (document.getElementById(x+":"+y) != null && document.getElementById(x+":"+y).getAttribute("mine") == "false") {
+            document.getElementById(x+":"+y).setAttribute("near",parseInt(document.getElementById(x+":"+y).getAttribute("near")) + 1);
           }
         }
       }
