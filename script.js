@@ -123,9 +123,9 @@ function showNum(btn) {
 function flag(btn) {
   if (btn.getAttribute("flagged") == "false") {
     btn.setAttribute("flagged", true)
-    btn.style.background = repeating-linear-gradient(45deg, #4caf50, transparent 100px)
+    btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)"
   } else {
     btn.setAttribute("flagged", false)
-    btn.style.background = gray
+    btn.style.background = "gray"
   }
 }
