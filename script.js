@@ -9,8 +9,13 @@ function crField() {
       divField.setAttribute("mine",false);
       divField.setAttribute("clicked",false);
       divField.setAttribute("near","0");
+      
       divField.onclick = function () {
         fieldClick(this);
+      }
+      
+      divField.oncontextmenu = function () {
+        flag(this);
       }
       
       document.getElementsByClassName("PlayingGround")[0].appendChild(divField);
