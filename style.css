@@ -5,6 +5,20 @@ body {
   user-select: none;
 }
 
+#bombicon {
+  position: absolute;
+  font-size: calc(2vw + 2vh);
+  top: 5%;
+  left: 5%;
+}
+
+#flagicon {
+  position: absolute;
+  font-size: calc(2vw + 2vh);
+  top: 20%;
+  left: 5%;
+}
+
 .SideBar {
   height: 0;
   padding-bottom: 40vw;
