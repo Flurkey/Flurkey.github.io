@@ -89,10 +89,9 @@ function showMines() {
 }
 
 function fieldClick(btn) {
-  if (btn != null || btn.getAttribute("flagged") == "false") {
-    if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false") {
-      btn.setAttribute("clicked", true);
-      showNum(btn)
+  if (btn != null) {
+    if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false" && btn.getAttribute("flagged") == "false") {
+      showNum(btn);
       if (btn.getAttribute("near") == 0) {
         var curLocation = btn.id.split(":");
         for (let _ = -1; _ < 2; _++) {
@@ -103,6 +102,7 @@ function fieldClick(btn) {
               if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
                 fieldClick(document.getElementById(x+":"+y));
               } else {
+                document.getElementById(x+":"+y).setAttribute("clicked", true);
                 showNum(document.getElementById(x+":"+y));
               }
             }
