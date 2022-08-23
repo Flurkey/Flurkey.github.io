@@ -1,7 +1,8 @@
 var size = 5;
-var bombs = 5;
+var bombs = 75;
 var flags = bombs;
-var Arr = []
+var Arr = [];
+
 function crField() {
   for (let z = 0; z < 100/size; z++) {
     for (let i = 0; i < 100/size; i++) {
