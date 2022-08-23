@@ -90,27 +90,29 @@ function showMines() {
 
 function fieldClick(btn) {
   if (btn != null) {
-    if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false" && btn.getAttribute("flagged") == "false") {
-      showNum(btn);
-      if (btn.getAttribute("near") == 0) {
-        var curLocation = btn.id.split(":");
-        for (let _ = -1; _ < 2; _++) {
-          for (let k = -1; k < 2; k++) {
-            var x = parseInt(curLocation[0])+_;
-            var y = parseInt(curLocation[1])+k;
-            if (document.getElementById(x+":"+y) != null) {
-              if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
-                fieldClick(document.getElementById(x+":"+y));
-              } else {
-                document.getElementById(x+":"+y).setAttribute("clicked", true);
-                showNum(document.getElementById(x+":"+y));
+    if (btn.getAttribute("flagged") == "false") {
+      if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false") {
+        showNum(btn);
+        if (btn.getAttribute("near") == 0) {
+          var curLocation = btn.id.split(":");
+          for (let _ = -1; _ < 2; _++) {
+            for (let k = -1; k < 2; k++) {
+              var x = parseInt(curLocation[0])+_;
+              var y = parseInt(curLocation[1])+k;
+              if (document.getElementById(x+":"+y) != null) {
+                if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
+                  fieldClick(document.getElementById(x+":"+y));
+                } else {
+                  document.getElementById(x+":"+y).setAttribute("clicked", true);
+                  showNum(document.getElementById(x+":"+y));
+                }
               }
             }
           }
         }
+      } else if (btn.getAttribute("mine") == "true") {
+        showMines()
       }
-    } else if (btn.getAttribute("mine") == "true") {
-      showMines()
     }
   }
 }
