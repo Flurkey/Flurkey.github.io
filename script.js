@@ -84,6 +84,7 @@ function showMines() {
   for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
     if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
+      document.getElementsByClassName("fieldCard")[i].style.cursor = "default";
     }
   }
 }
