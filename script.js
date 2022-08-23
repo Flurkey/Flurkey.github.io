@@ -1,4 +1,6 @@
 var size = 5;
+var bombs = 5;
+var flags = bombs;
 var Arr = []
 function crField() {
   for (let z = 0; z < 100/size; z++) {
@@ -45,7 +47,7 @@ function fieldLink() {
         row++;
     }
   }
-  crMines(75);
+  crMines(bombs);
 }
 
 function crMines(num) {
@@ -126,12 +128,14 @@ function showNum(btn) {
 
 function flag(btn) {
   if (btn.getAttribute("clicked") == "false") {
-    if (btn.getAttribute("flagged") == "false") {
+    if (btn.getAttribute("flagged") == "false" && flags > 0) {
       btn.setAttribute("flagged", true);
       btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)";
+      flags--;
     } else {
       btn.setAttribute("flagged", false);
       btn.style.background = "#9f9f9f";
+      flags++;
     }
   }
 }
