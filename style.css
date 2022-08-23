@@ -10,6 +10,20 @@ body {
   padding-left: 1.5vw;
 }
 
+.BombAmt {
+  font-size: calc(1.2vw + 1.2vh);
+  padding-left: 1vw;
+  margin: 0;
+  position: relative;
+}
+
+.FlagAmt {
+  font-size: calc(1.2vw + 1.2vh);
+  padding-left: 1vw;
+  margin: 0;
+  position: relative;
+}
+
 .Scores {
   display: flex;
   width: 100%;
