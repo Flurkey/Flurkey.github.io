@@ -33,6 +33,7 @@ body {
 .fieldCard {
   height: 5%;
   width: 5%;
+  font-size: calc(1vw + 1vh);
   display: flex;
   justify-content: center;
   align-items: center;
