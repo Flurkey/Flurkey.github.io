@@ -33,6 +33,9 @@ body {
 .fieldCard {
   height: 5%;
   width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: inset 1px 1px 3px white;
   background: gray;
   cursor: pointer;
