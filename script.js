@@ -131,7 +131,7 @@ function flag(btn) {
       btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)";
     } else {
       btn.setAttribute("flagged", false);
-      btn.style.background = "gray";
+      btn.style.background = "#9f9f9f";
     }
   }
 }
