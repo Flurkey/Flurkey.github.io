@@ -89,7 +89,7 @@ function showMines() {
 }
 
 function fieldClick(btn) {
-  if (btn != null {
+  if (btn != null) {
     if (btn.getAttribute("clicked") == "false") {
       if (btn.getAttribute("flagged") == "false" || btn.getAttribute("mine") == "false") {
         btn.setAttribute("clicked", true);
