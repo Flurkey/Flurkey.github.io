@@ -5,6 +5,18 @@ body {
   user-select: none;
 }
 
+.SideBar {
+  height: 0;
+  padding-bottom: 40vw;
+  width: 20vw;
+  background: rgb(223 223 223);
+  border-radius: 1vw;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
 .PlayingGroundBackground {
   height: 0;
   padding-bottom: 40vw;
