@@ -132,9 +132,9 @@ function flag(btn) {
       btn.setAttribute("flagged", true);
       btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)";
       flags--;
-    } else {
+    } else if (btn.getAttribute("flagged") == "true") {
       btn.setAttribute("flagged", false);
-      btn.style.background = "#9f9f9f";
+      btn.style.background = "";
       flags++;
     }
   }
