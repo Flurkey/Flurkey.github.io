@@ -90,7 +90,7 @@ function showMines() {
 
 function fieldClick(btn) {
   if (btn != null) {
-    if (btn.getAttribute("flagged") == "false" || btn.getAttribute("mine") == "false") {{
+    if (btn.getAttribute("flagged") == "false" || btn.getAttribute("mine") == "false") {
       showNum(btn);
       if (btn.getAttribute("near") == 0) {
         var curLocation = btn.id.split(":");
