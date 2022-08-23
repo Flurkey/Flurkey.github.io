@@ -90,8 +90,8 @@ function showMines() {
 
 function fieldClick(btn) {
   if (btn != null) {
-    if (btn.getAttribute("clicked") == "false") {
-      if (btn.getAttribute("flagged") == "false" || btn.getAttribute("mine") == "false") {
+    if (btn.getAttribute("clicked") == "false" || btn.getAttribute("flagged") == "false") {
+      if (btn.getAttribute("mine") == "false") {
         btn.setAttribute("clicked", true);
         showNum(btn);
         if (btn.getAttribute("near") == 0) {
@@ -111,7 +111,7 @@ function fieldClick(btn) {
             }
           }
         }
-      } else if (btn.getAttribute("mine") == "true" && btn.getAttribute("flagged") == "false") {
+      } else if (btn.getAttribute("mine") == "true") {
         showMines()
         //game-over
       }
