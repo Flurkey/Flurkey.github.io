@@ -84,7 +84,6 @@ function showMines() {
   for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
     if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
       document.getElementsByClassName("fieldCard")[i].style.background = "red";
-      document.getElementsByClassName("fieldCard")[i].style.cursor = "default";
     }
   }
 }
@@ -123,6 +122,7 @@ function fieldClick(btn) {
 function showNum(btn) {
   btn.innerHTML = btn.getAttribute("near");
   btn.style.background = "dimgray";
+  btn.style.cursor = "default !important";
 }
 
 function flag(btn) {
