@@ -45,7 +45,7 @@ function fieldLink() {
         row++;
     }
   }
-  crMines(50);
+  crMines(75);
 }
 
 function crMines(num) {
