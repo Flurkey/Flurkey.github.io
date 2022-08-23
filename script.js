@@ -55,7 +55,6 @@ function crMines(num) {
     if(document.getElementById(ranCard).getAttribute("mine") == 'false') {
       document.getElementById(ranCard).setAttribute("mine", true);
     } else {
-      console.log(ranCard + " is already a bomb.");
       i--;
     }
   }
@@ -112,8 +111,8 @@ function fieldClick(btn) {
           }
         }
       } else if (btn.getAttribute("mine") == "true") {
-        showMines()
-        //game-over
+        document.body.style.pointerEvents = "none";
+        showMines();
       }
     }
   }
@@ -128,11 +127,11 @@ function showNum(btn) {
 function flag(btn) {
   if (btn.getAttribute("clicked") == "false") {
     if (btn.getAttribute("flagged") == "false") {
-      btn.setAttribute("flagged", true)
-      btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)"
+      btn.setAttribute("flagged", true);
+      btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)";
     } else {
-      btn.setAttribute("flagged", false)
-      btn.style.background = "gray"
+      btn.setAttribute("flagged", false);
+      btn.style.background = "gray";
     }
   }
 }
