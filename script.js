@@ -122,7 +122,7 @@ function fieldClick(btn) {
 function showNum(btn) {
   btn.innerHTML = btn.getAttribute("near");
   btn.style.background = "dimgray";
-  btn.style.cursor = "default !important";
+  btn.style.cursor = "default";
 }
 
 function flag(btn) {
