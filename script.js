@@ -91,7 +91,7 @@ function showMines() {
 function fieldClick(btn) {
   if (btn != null) {
     if (btn.getAttribute("flagged") == "false") {
-      if (btn.getAttribute("mine") == "false" && btn.getAttribute("clicked") == "false") {
+      if (btn.getAttribute("mine") == "false") {
         showNum(btn);
         if (btn.getAttribute("near") == 0) {
           var curLocation = btn.id.split(":");
@@ -123,11 +123,13 @@ function showNum(btn) {
 }
 
 function flag(btn) {
-  if (btn.getAttribute("flagged") == "false") {
-    btn.setAttribute("flagged", true)
-    btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)"
-  } else {
-    btn.setAttribute("flagged", false)
-    btn.style.background = "gray"
+  if (btn.getAttribute("clicked") == "false") {
+    if (btn.getAttribute("flagged") == "false") {
+      btn.setAttribute("flagged", true)
+      btn.style.background = "repeating-linear-gradient(45deg, #4caf50, transparent 100px)"
+    } else {
+      btn.setAttribute("flagged", false)
+      btn.style.background = "gray"
+    }
   }
 }
