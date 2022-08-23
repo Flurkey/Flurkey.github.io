@@ -11,9 +11,18 @@ body {
 }
 
 .Scores {
+  display: flex;
   width: 100%;
   height: calc(2vw + 2vh);
   padding-top: 3vh;
+  align-items: center;
+}
+
+.ScoresText {
+  font-size: calc(1.2vw + 1.2vh);
+  padding-left: 1vw;
+  margin: 0;
+  position: relative;
 }
 
 .SideBar {
