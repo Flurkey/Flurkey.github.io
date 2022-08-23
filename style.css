@@ -5,18 +5,15 @@ body {
   user-select: none;
 }
 
-#bombicon {
-  position: absolute;
+#icons {
   font-size: calc(2vw + 2vh);
-  top: 5%;
-  left: 5%;
+  padding-left: 1.5vw;
 }
 
-#flagicon {
-  position: absolute;
-  font-size: calc(2vw + 2vh);
-  top: 20%;
-  left: 5%;
+.Scores {
+  width: 100%;
+  height: calc(2vw + 2vh);
+  padding-top: 3vh;
 }
 
 .SideBar {
