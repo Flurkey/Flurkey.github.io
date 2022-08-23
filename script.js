@@ -111,7 +111,7 @@ function fieldClick(btn) {
             }
           }
         }
-      } else if (btn.getAttribute("mine") == "true" && btn.getAttribute("flagged") == "false") {
+      } else if (btn.getAttribute("mine") == "true") {
         showMines()
         //game-over
       }
