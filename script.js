@@ -103,7 +103,7 @@ function fieldClick(btn) {
                 if(parseInt(document.getElementById(x+":"+y).getAttribute("near")) == 0) {
                   fieldClick(document.getElementById(x+":"+y));
                 } else {
-                  document.getElementById(x+":"+y).setAttribute("clicked", true);
+                  //document.getElementById(x+":"+y).setAttribute("clicked", true);
                   showNum(document.getElementById(x+":"+y));
                 }
               }
