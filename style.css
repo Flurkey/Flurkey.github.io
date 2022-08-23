@@ -2,33 +2,34 @@ body {
   margin: 0;
   background: rgba(27,27,27);
   font-family: monospace;
+  user-select: none;
 }
 
 .PlayingGroundBackground {
-    height: 0;
-    padding-bottom: 40vw;
-    width: 40vw;
-    background: rgb(223 223 223);
-    border-radius: 1vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: 0;
+  padding-bottom: 40vw;
+  width: 40vw;
+  background: rgb(223 223 223);
+  border-radius: 1vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .PlayingGround {
-    display: flex;
-    flex-direction: row;
-    height: 35vw;
-    width: 35vw;
-    background: rgb(255,255,255);
-    border-radius: .75vw;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    flex-wrap: wrap;
-    align-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  height: 35vw;
+  width: 35vw;
+  background: rgb(255,255,255);
+  border-radius: .75vw;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .fieldCard {
