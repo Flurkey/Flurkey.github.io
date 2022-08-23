@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: inset 1px 1px 3px white;
-  background: gray;
+  background: #9f9f9f;
   cursor: pointer;
 }
 
