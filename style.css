@@ -93,3 +93,17 @@ body {
 .fieldCard:hover {
   background: darkgray;
 }
+
+.rstButton {
+  font-size: calc(1vw + 1vh);
+  width: 80%;
+  height: 3.5vh;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rstButton:hover {
+  cursor: pointer;
+}
