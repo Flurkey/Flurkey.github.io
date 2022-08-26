@@ -1,9 +1,10 @@
 var size = 5;
 var bombs = 75;
 var flags = bombs;
-var Arr = [];
 
-function crField() {
+
+function crField() 
+  var Arr = [];
   for (let z = 0; z < 100/size; z++) {
     for (let i = 0; i < 100/size; i++) {
       var divField = document.createElement("div");
@@ -142,4 +143,11 @@ function flag(btn) {
     }
     document.getElementsByClassName("FlagAmt")[0].innerHTML = bombs-flags;
   }
+}
+
+function reset() {
+  while (document.getElementsByClassName("PlayingGround")[0].firstChild) {
+    document.getElementsByClassName("PlayingGround")[0].removeChild(document.getElementsByClassName("PlayingGround")[0].firstChild);
+  }
+  crField();
 }
