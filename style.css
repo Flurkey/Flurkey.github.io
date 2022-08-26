@@ -28,7 +28,7 @@ body {
   display: flex;
   width: 100%;
   height: calc(2vw + 2vh);
-  padding-top: 3vh;
+  padding-top: 5vh;
   align-items: center;
 }
 
@@ -95,9 +95,11 @@ body {
 }
 
 .rstButton {
+  border: 0;
+  border-radius: 1vh;
   font-size: calc(1vw + 1vh);
   width: 80%;
-  height: 3.5vh;
+  height: calc(2.5vh + 1vw);
   position: absolute;
   bottom: 3vh;
   left: 50%;
@@ -106,4 +108,5 @@ body {
 
 .rstButton:hover {
   cursor: pointer;
+  background: lightgray;
 }
