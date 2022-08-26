@@ -1,9 +1,10 @@
 var size = 5;
 var bombs = 75;
-var flags = bombs;
+var flags;
 var Arr = [];
 
 function crField() {
+  flags = bombs;
   for (let z = 0; z < 100/size; z++) {
     for (let i = 0; i < 100/size; i++) {
       var divField = document.createElement("div");
