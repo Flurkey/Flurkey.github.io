@@ -149,5 +149,6 @@ function reset() {
   while (document.getElementsByClassName("PlayingGround")[0].firstChild) {
     document.getElementsByClassName("PlayingGround")[0].removeChild(document.getElementsByClassName("PlayingGround")[0].firstChild);
   }
+  document.body.style.pointerEvents = "";
   crField();
 }
