@@ -117,7 +117,7 @@ function fieldClick(btn) {
           }
         }
       } else if (btn.getAttribute("mine") == "true") {
-        document.body.style.pointerEvents = "none";
+        document.getElementsByClassName("PlayingGround")[0].style.pointerEvents = "none";
         showMines();
       }
     }
@@ -150,6 +150,6 @@ function reset() {
   while (document.getElementsByClassName("PlayingGround")[0].firstChild) {
     document.getElementsByClassName("PlayingGround")[0].removeChild(document.getElementsByClassName("PlayingGround")[0].firstChild);
   }
-  document.body.style.pointerEvents = "";
+  document.getElementsByClassName("PlayingGround")[0].style.pointerEvents = "";
   crField();
 }
