@@ -61,7 +61,7 @@ function crMines(num) {
       i--;
     }
   }
-  document.getElementByClassName("BombAmt").innerHTML = bombs;
+  document.getElementsByClassName("BombAmt").innerHTML = bombs;
   crNear();
 }
 
@@ -139,6 +139,6 @@ function flag(btn) {
       btn.style.background = "";
       flags++;
     }
-    document.getElementByClassName("FlagAmt").innerHTML = bombs-flags;
+    document.getElementsByClassName("FlagAmt").innerHTML = bombs-flags;
   }
 }
