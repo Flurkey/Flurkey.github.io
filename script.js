@@ -61,7 +61,7 @@ function fieldLink() {
 //     }
 //   }
   
-  document.getElementsByClassName("PlayingGround")[0].querySelectorAll("div").forEach((_,i) => { Arr[row][col] = _.id; col < fieldsize-1 ? col++ : col = 0; row++ })
+  document.getElementsByClassName("PlayingGround")[0].querySelectorAll("div").forEach((_,i) => { Arr[row][col] = _.id; col < fieldsize-1 ? col++ : col = 0; row++ });
   
   crMines(bombs);
 }
