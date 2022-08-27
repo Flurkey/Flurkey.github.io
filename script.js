@@ -1,3 +1,4 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 var size = 5;
 var bombs = 75;
 var flags;
@@ -164,8 +165,8 @@ function wincheck() {
   document.querySelectorAll('[flagged="true"]').forEach((btn) => { btn.getAttribute("mine") == "false" ? gamewon = false : null });
   
   if (gamewon) {
+    confetti();
     document.getElementsByClassName("PlayingGround")[0].style.pointerEvents = "none";
-    console.log("Nice, you won!");
     wins++;
   }
 }
