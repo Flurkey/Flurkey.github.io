@@ -4,6 +4,18 @@ var flags;
 var Arr = [];
 var wins = 0;
 
+const start = () => {
+  setTimeout(function() {
+    confetti.start()
+  }, 1000);
+};
+
+const stop = () => {
+  setTimeout(function() {
+    confetti.stop()
+  }, 5000);
+};
+
 function crField() {
   flags = bombs;
   for (let z = 0; z < 100/size; z++) {
