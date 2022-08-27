@@ -69,11 +69,7 @@ function crMines(num) {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   for (let i = 0; i < num; i++) {
     var ranCard = Arr[Math.floor(Math.random() * fieldsize)][Math.floor(Math.random() * fieldsize)]
-    if(document.getElementById(ranCard).getAttribute("mine") == 'false') {
-      document.getElementById(ranCard).setAttribute("mine", true);
-    } else {
-      i--;
-    }
+    document.getElementById(ranCard).getAttribute("mine") == 'false' ? document.getElementById(ranCard).setAttribute("mine", true) : i--;
   }
   document.getElementsByClassName("BombAmt")[0].innerHTML = bombs;
   document.getElementsByClassName("FlagAmt")[0].innerHTML = bombs-flags;
