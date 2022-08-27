@@ -95,11 +95,7 @@ function crNear() {
 }
 
 function showMines() {
-  for (let i = 0; i < document.getElementsByClassName("fieldCard").length; i++) {
-    if (document.getElementsByClassName("fieldCard")[i].getAttribute("mine") == 'true') {
-      document.getElementsByClassName("fieldCard")[i].style.background = "red";
-    }
-  }
+  document.querySelectorAll('[mine="true"]').forEach((btn) => { btn.style.background = "red" });
 }
 
 function fieldClick(btn) {
