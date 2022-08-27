@@ -164,7 +164,8 @@ function wincheck() {
   document.querySelectorAll('[flagged="true"]').forEach((btn) => { btn.getAttribute("mine") == "false" ? gamewon = false : null });
   
   if (gamewon) {
-    wins++;
+    document.getElementsByClassName("PlayingGround")[0].style.pointerEvents = "none";
     console.log("Nice, you won!");
+    wins++;
   }
 }
