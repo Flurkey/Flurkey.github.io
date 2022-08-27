@@ -47,19 +47,22 @@ function fieldLink() {
   Arr = new Array(fieldsize).fill(null)
   Arr.forEach((e,i) => Arr[i] = new Array(fieldsize))
 
-  var field = document.getElementsByClassName("fieldCard");
+//   var field = document.getElementsByClassName("fieldCard");
   var col = 0;
   var row = 0;
 
-  for (let i = 0; i < field.length; i++) {
-    Arr[row][col] = field[i].id
-    if(col < fieldsize-1) {
-        col++
-    } else {
-        col = 0;
-        row++;
-    }
-  }
+//   for (let i = 0; i < field.length; i++) {
+//     Arr[row][col] = field[i].id
+//     if(col < fieldsize-1) {
+//         col++
+//     } else {
+//         col = 0;
+//         row++;
+//     }
+//   }
+  
+  document.getElementsByClassName("PlayingGround")[0].querySelectorAll("div").forEach((_,i) => { Arr[row][col] = _.id; col < fieldsize-1 ? col++ : col = 0; row++ })
+  
   crMines(bombs);
 }
 
