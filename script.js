@@ -45,7 +45,7 @@ function crField() {
 function fieldLink() {
   var fieldsize = Math.sqrt(document.getElementsByClassName("fieldCard").length)
   Arr = new Array(fieldsize).fill(null)
-  Arr.forEach((e,i) => Arr[i] = new Array(fieldsize))
+  Arr.forEach((e,i) => Arr[i] = new Array(fieldsize).fill(null))
 
 //   var field = document.getElementsByClassName("fieldCard");
   var col = 0;
