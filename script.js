@@ -1,4 +1,3 @@
-import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 var size = 5;
 var bombs = 75;
 var flags;
