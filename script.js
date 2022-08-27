@@ -2,6 +2,7 @@ var size = 5;
 var bombs = 75;
 var flags;
 var Arr = [];
+var wins = 0;
 
 function crField() {
   flags = bombs;
@@ -143,6 +144,10 @@ function flag(btn) {
     }
     document.getElementsByClassName("FlagAmt")[0].innerHTML = bombs-flags;
   }
+  
+  if (flags == 0) {
+    wincheck();
+  }
 }
 
 function reset() {
@@ -152,4 +157,14 @@ function reset() {
   }
   document.getElementsByClassName("PlayingGround")[0].style.pointerEvents = "";
   crField();
+}
+
+function wincheck() {
+  var gamewon = true;
+  document.querySelectorAll('[flagged="true"]').forEach((btn) => { btn.getAttribute("mine") == "false" ? gamewon = false : null });
+  
+  if (gamewon) {
+    wins++;
+    console.log("Nice, you won!");
+  }
 }
