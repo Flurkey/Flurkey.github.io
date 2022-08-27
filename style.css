@@ -79,6 +79,9 @@ body {
 }
 
 .fieldCard {
+  transition-property: background;
+  transition-duration: .1s;
+  transition-timing-function: linear;
   height: 5%;
   width: 5%;
   font-size: calc(1vw + 1vh);
