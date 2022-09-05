@@ -1,6 +1,5 @@
-# Bajdollu.github.io
-Completed Minesweeper, has some minor bugs and it's totally not easily won if you know simple javascript, but it works, plus who would cheat themselves in a single player game. PS don't resize as 400 divs do their toll on the browser.. You've been warned.
-
+# Beauty of boredom, Bajdollu.github.io
+Completed Minesweeper, has some minor bugs and it's totally not easily won if you know simple javascript, but it works, plus who would cheat themselves in a single player game. PS don't resize as 400 divs do take their toll on the browser.. You've been warned.
 
 This was a project of mine to make a simplistic/modern minesweeper while at work! This was all done on github it self thus the reason of so many commits, and it was very tedious.
 
