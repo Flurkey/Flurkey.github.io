@@ -1,16 +1,5 @@
-@keyframes slide-right {
-    0% {
-        -webkit-transform: translateX(0vw);
-        transform: translateX(0vw);
-    }
-    100% {
-        -webkit-transform: translateX(-20vw);
-        transform: translateX(-20vw);
-    }
-}
-
-.sidebar:hover {
-    animation: slide-right 2s infinite;
+.sidebar:hover + side-content {
+    transform: translateX(0);
 }
 
 body {
@@ -28,6 +17,8 @@ body {
     height: 100%;
     width: 16vw;
     background: lightgray;
+    transform: translateX(-20vw);
+    transition: all .6s ease-in-out
 }
 
 .sidebar {
