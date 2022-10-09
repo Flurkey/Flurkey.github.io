@@ -24,7 +24,7 @@ body {
 }
 
 .side-content {
-    float: rbodyight;
+    float: right;
     height: 100%;
     width: 16vw;
     background: lightgray;
