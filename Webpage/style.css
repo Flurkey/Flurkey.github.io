@@ -2,6 +2,15 @@
     transform: translateX(0);
 } */
 
+.userList {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16vw;
+    height: 100%;
+    background: lightgray;
+}
+
 body {
     margin: 0;
     background: whitesmoke;
@@ -18,7 +27,7 @@ body {
     width: 16vw;
     background: lightgray;
     /* transform: translateX(-20vw); */
-    transition: all .6s ease-in-out
+    /* transition: all .6s ease-in-out */
 }
 
 .sidebar {
