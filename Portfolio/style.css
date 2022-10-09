@@ -1,0 +1,120 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background: rgb(17,17,17);
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes loadfadeout {
+  from {height: 100%;}
+  to {height: 0;}
+}
+
+@media screen and (max-device-width:991px), screen and (max-width:991px) {
+    .pc {
+        Visibility: hidden !important;
+    }
+    .mobile {
+        Visibility: visible !important;
+    }
+}
+
+.information {
+    width: 40vw;
+    height: 50vh;
+    background-color: transparent;
+    position: absolute;
+    top: 25vh;
+    right: 13vw;
+}
+
+.buttons > button {
+    display: inline;
+    width: 3.4vw;
+    height: 3.4vw;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 0.1vw solid rgb(17,17,17);
+    background-color: rgb(42,42,42);
+    transition: background-color .2s ease-out;
+    margin-top: 1.3vh;
+    margin-bottom: 1.3vh;
+}
+
+.active {
+    background-color: rgb(240,173,27) !important;
+}
+
+.buttons > button:hover {
+    background-color: rgb(240,173,27);
+}
+
+.buttons > button > i {
+    color: #e1e1e1;
+    font-size: 2.5vh;
+}
+
+.buttons {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 8vw;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    right: 0;
+}
+
+.mobile {
+    Visibility: hidden;   
+}
+
+.mpfp {
+    position: absolute;
+    top: 15vh;
+    left: 35vw;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px;
+}
+
+.pfp {
+    position: absolute;
+    top: 5vh;
+    left: 3vw;
+    background-color: white;
+    height: 90vh;
+    width: 33.33333333%;
+    border-radius: 5vh;
+    box-shadow: 0px 0px 0.7vw 0;
+}
+
+.slantedback {
+    box-shadow: 0 0 5vh 1vh;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 200%;
+    left: -83%;
+    transform: rotate(-15deg);
+    top: -50%;
+    background: rgb(255,205,0);
+    background: -moz-radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
+    background: radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcd00",endColorstr="#f0ad1b",GradientType=1);
+}
