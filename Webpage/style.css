@@ -1,4 +1,4 @@
-html {
+body {
     margin: 0;
     background: whitesmoke;
 }
@@ -9,7 +9,7 @@ html {
 }
 
 .side-content {
-    float: right;
+    float: rbodyight;
     height: 100%;
     width: 16vw;
     background: lightgray;
