@@ -4,20 +4,20 @@ html {
 }
 
 .container {
-    height: 100%;
+    height: 100vh;
     width: 20vw;
 }
 
 .side-content {
     float: right;
     height: 100%;
-    width: 15vw;
+    width: 16vw;
     background: lightgray;
 }
 
 .sidebar {
     float: left;
     height: 100%;
-    width: 5vw;
+    width: 4vw;
     background: cornflowerblue;
 }
