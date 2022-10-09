@@ -1,0 +1,18 @@
+.container {
+    height: 100%;
+    width: 20vw;
+}
+
+.side-content {
+    float: right;
+    height: 100%;
+    width: 15vw;
+    background: lightgray;
+}
+
+.sidebar {
+    float: left;
+    height: 100%;
+    width: 5vw;
+    background: cornflowerblue;
+}
