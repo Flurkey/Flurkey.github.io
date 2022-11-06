@@ -40,3 +40,8 @@ body {
     border-radius : 100%;
     border : solid 2px white;
 }
+
+.fa-solid, .fas {
+    background-color : #1f2022;
+    font-size : 15px;
+}
