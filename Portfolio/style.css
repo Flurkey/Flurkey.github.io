@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -30,7 +34,8 @@ body {
     right: 13vw;
 }
 
-.buttons > button {
+.buttons > a {
+    position: relative;
     display: inline;
     width: 3.4vw;
     height: 3.4vw;
@@ -47,20 +52,24 @@ body {
     background-color: rgb(240,173,27) !important;
 }
 
-.buttons > button:hover {
+.buttons > a:hover {
     background-color: rgb(240,173,27);
 }
 
-.buttons > button > i {
+.buttons > a > i {
     color: #e1e1e1;
-    font-size: 2.5vh;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
 }
 
 .buttons {
     height: 100%;
     width: 100%;
     background-color: transparent;
-    position: absolute;
+    position: relative;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -69,9 +78,10 @@ body {
 }
 
 .sidebar {
+    z-index: 1;
     width: 8vw;
     height: 100%;
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     top: 0;
     right: 0;
@@ -106,15 +116,51 @@ body {
 .slantedback {
     box-shadow: 0 0 5vh 1vh;
     display: block;
-    position: fixed;
-    width: 100%;
-    height: 200%;
-    left: -83%;
-    transform: rotate(-15deg);
+    position: absolute;
+    width: 130vw;
+    height: 1200vh;
+    left: -70%;
+    transform: rotate(-9deg);
     top: -50%;
     background: rgb(255,205,0);
     background: -moz-radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
     background: -webkit-radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
     background: radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(240,173,27,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcd00",endColorstr="#f0ad1b",GradientType=1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+}
+
+.container > div {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.a-background {
+    position: absolute;
+    border-radius: 2vw;
+    width: 85vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(32, 32, 32);
+    -webkit-box-shadow: 0 0 .8vw .1vw rgb(17,17,17); 
+    box-shadow: 0 0 .8vw .1vw rgb(17,17,17);
+}
+
+.a-title {
+    color: white;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.a-title > span {
+    color:rgb(255,205,0);
 }
