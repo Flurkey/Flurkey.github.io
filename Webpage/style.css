@@ -3,11 +3,12 @@
 } */
 
 .channel-title {
+    box-shadow: rgb(0 0 0 / 25%) 0px 2px 5px 0px;
     position: absolute;
     width: 80vw;
     height: 7vh;
     background: #d3d3d3;
-    z-index: 1;
+    z-index: -1;
     top: 0;
     right: 0;
 
@@ -20,11 +21,12 @@
     width: 16vw;
     height: 100%;
     background: #c1c1c1;
+    z-index: -2;
 }
 
 body {
     margin: 0;
-    background: whitesmoke;
+    background: #d3d3d3;
 }
 
 .container {
@@ -45,5 +47,5 @@ body {
     float: left;
     height: 100%;
     width: 4vw;
-    background: cornflowerblue;
+    background: #8b8b8b;
 }
