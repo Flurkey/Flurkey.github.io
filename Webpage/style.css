@@ -2,6 +2,15 @@
     transform: translateX(0);
 } */
 
+.title-text {
+    margin: 0;
+    font-size: calc(1vh + 1vw);
+    top: 50%;
+    left: 5vw;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
 .channel-title {
     box-shadow: rgb(0 0 0 / 25%) 0px 2px 5px 0px;
     position: absolute;
@@ -11,7 +20,6 @@
     z-index: -1;
     top: 0;
     right: 0;
-
 }
 
 .userList {
