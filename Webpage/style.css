@@ -2,6 +2,16 @@
     transform: translateX(0);
 } */
 
+.channel-tag {
+    margin: 0;
+    font-size: calc(2vh + 2vw);
+    top: 50%;
+    left: 2vw;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #323232
+}
+
 .title-text {
     margin: 0;
     font-size: calc(1vh + 1vw);
@@ -9,6 +19,7 @@
     left: 5vw;
     position: absolute;
     transform: translateY(-50%);
+    color: #323232
 }
 
 .channel-title {
@@ -35,6 +46,7 @@
 body {
     margin: 0;
     background: #d3d3d3;
+    font-family: monospace;
 }
 
 .container {
