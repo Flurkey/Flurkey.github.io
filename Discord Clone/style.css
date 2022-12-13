@@ -2,6 +2,22 @@
     transform: translateX(0);
 } */
 
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    width: 100%;
+    height: 92%;
+}
+
+.textbox {
+    width: 100%;
+    height: 8%;
+}
+
 .main-area {
     width: 64vw;
     height: 93vh;
