@@ -2,6 +2,17 @@
     transform: translateX(0);
 } */
 
+.input {
+    background: none;
+    border: none;
+    outline: none !important;
+    height: 100%;
+    width: 80%;
+    left: 10%;
+    position: relative;
+
+}
+
 .main-container {
     height: 100%;
     display: flex;
