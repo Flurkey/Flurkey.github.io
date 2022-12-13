@@ -2,13 +2,21 @@
     transform: translateX(0);
 } */
 
+.fa-circle-plus {
+    margin: 0 1.5vw 0 1.5vw;
+    font-size: calc(50% + 100%);
+    position: relative;
+    transform: translateY(50%);
+    top: -25%;
+    color: #c1c1c1;
+}
+
 .input {
     background: none;
     border: none;
     outline: none !important;
     height: 100%;
     width: 80%;
-    left: 5%;
     position: relative;
     font-size: 2vh;
 }
@@ -38,6 +46,10 @@
     height: 50%;
     border-radius: 1vmin;
     background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .main-area {
@@ -106,8 +118,6 @@ body {
     height: 100%;
     width: 16vw;
     background: #c1c1c1;
-    /* transform: translateX(-20vw); */
-    /* transition: all .6s ease-in-out */
 }
 
 .sidebar {
