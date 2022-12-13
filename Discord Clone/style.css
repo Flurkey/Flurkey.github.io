@@ -2,6 +2,19 @@
     transform: translateX(0);
 } */
 
+.cat-container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+}
+
+.cat-info {
+    margin: 0;
+    margin-top: 3vh;
+    font-size: 1.7vh;
+}
+
 .fa-circle-plus {
     margin: 0 1.5vw 0 1.5vw;
     font-size: calc(50% + 100%);
@@ -107,7 +120,7 @@
 body {
     margin: 0;
     background: #d3d3d3;
-    font-family: monospace;
+    font-family: unset;
 }
 
 .container {
